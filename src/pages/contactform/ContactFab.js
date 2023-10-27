@@ -2,31 +2,43 @@ import React from 'react';
 import Fab from '@mui/material/Fab';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import PhoneIcon from '@mui/icons-material/Phone';
+import { styled } from '@mui/system';
+
+const ButtonWrapper = styled('div')({
+  position: 'fixed',
+  bottom: '2rem',
+  right: '2rem',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-end',
+});
+
+const FabButton = styled(Fab)({
+  margin: '0.5rem',
+});
 
 const ContactButtons = () => {
   const handleWhatsAppClick = () => {
-    // Replace 'phoneNumber' with the actual phone number you want to open in WhatsApp
-    const phoneNumber = '9566893366';
+    const phoneNumber = '5666893366';
     const whatsappURL = `https://wa.me/${phoneNumber}`;
     window.open(whatsappURL, '_blank');
   };
 
   const handlePhoneClick = () => {
-    // Replace 'phoneNumber' with the actual phone number you want to dial
-    const phoneNumber = '9566893366';
+    const phoneNumber = '5666893214';
     const phoneURL = `tel:${phoneNumber}`;
     window.open(phoneURL, '_blank');
   };
 
   return (
-    <div>
-      <Fab color="primary" aria-label="WhatsApp" onClick={handleWhatsAppClick}>
+    <ButtonWrapper>
+      <FabButton color="success" aria-label="WhatsApp" onClick={handleWhatsAppClick}>
         <WhatsAppIcon />
-      </Fab>
-      <Fab color="secondary" aria-label="Phone" onClick={handlePhoneClick}>
+      </FabButton>
+      <FabButton color="secondary" aria-label="Phone" onClick={handlePhoneClick}>
         <PhoneIcon />
-      </Fab>
-    </div>
+      </FabButton>
+    </ButtonWrapper>
   );
 };
 
