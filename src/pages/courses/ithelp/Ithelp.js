@@ -5,6 +5,7 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
+import Image from "next/image";
 import React from "react";
 
 function createData(name, details) {
@@ -46,7 +47,7 @@ const Electrician = () => {
                   background: "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
                 }}
               >
-                <img
+                 <Image 
                   src={"/courses/electri.svg"}
                   alt="Image"
                   style={{ width: "100%" }}

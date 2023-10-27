@@ -49,14 +49,14 @@ const NSDC = () => {
                 and organizations that provide skill training. It also develops
                 appropriate models to enhance, support and coordinate private
                 sector initiatives. The differentiated focus on 21 sectors under
-                NSDC's purview and its understanding of their viability will
+                NSDC&apos;s purview and its understanding of their viability will
                 make every sector attractive to private investment.
                 <br />
                 NSDC operates under a Public Private Partnership (PPP) model.
                 The Government of India through the Ministry of Skill
                 Development & Entrepreneurship (MSDE) owns 49% of the share
                 capital, while the private sector owns 51%. According to the
-                NSDC's Board Report, the government is the largest shareholder
+                NSDC&apos;s Board Report, the government is the largest shareholder
                 and corporation controller, and the private holders are 10
                 business associations or confederations including the
                 Confederation of Indian Industry (CII), Federation of Indian

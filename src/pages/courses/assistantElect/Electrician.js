@@ -14,6 +14,7 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
+import Image from "next/image";
 import React from "react";
 
 function createData(name, details) {
@@ -64,11 +65,11 @@ const Electrician = () => {
                       "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
                   }}
                 >
-                  <img
-                    src={"/courses/electri.svg"}
-                    alt="Image"
-                    style={{ width: "100%" }}
-                  />
+                  <Image 
+                  src={"/courses/electri.svg"}
+                  alt="Image"
+                  style={{ width: "100%" }}
+                />
                   <Typography variant="h6">
                     <List>
                       <ListItem>• Sector: Construction</ListItem>
@@ -97,7 +98,7 @@ const Electrician = () => {
                     electrical connections at construction sites and residential
                     and commercial buildings.
                     <br />
-                    Electrician's Assistant Level-4 Electrician or above for
+                    Electrician&quot;s Assistant Level-4 Electrician or above for
                     installation, repair, and maintenance of permanent
                     connections.
                     <br /> Individual LV is single Appropriate selection and use

@@ -1,6 +1,7 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
+import Image from 'next/image';
 
 const About = () => {
   return (
@@ -23,7 +24,7 @@ const About = () => {
       <Container>
         <Grid container spacing={2} sx={{marginTop:1,}}>
           <Grid item xs={12} sm={6} md={6} lg={6}>
-            <img
+            <Image
               src={"/bg/aboutusgirl.svg"}
               alt={`Image`}
               style={{ maxWidth: "100%" }}
@@ -54,11 +55,11 @@ const About = () => {
                 and State, for skill development and Central Government schemes
                 in the Ministry of Entrepreneurship have got consultative status
                 pan India To provide necessary skills to thousands of youth.<br/> The
-                Institute's unique training approach provides industry-required,
+                Institute&quot;s unique training approach provides industry-required,
                 employability-linked appropriate skill training at pace, scale
                 and standards. Well designed to deliver.<br/> Pradhan Mantri Kaushal
                 Kendra (PMKVY) and DDU-GKY are among the most important partners
-                for the government's flagship programme. Skills Foundation is
+                for the government&quot;s flagship programme. Skills Foundation is
                 one.
               </Typography>
             </Box>
@@ -103,14 +104,14 @@ const About = () => {
             they need to excel in their chosen fields. <br/>2. **Student-Centered
             Approach:** We put our students at the center of everything we do.
             Our goal is to provide a supportive and inclusive environment that
-            ensures every student's success.<br/> 3. **Industry Relevance:** We
+            ensures every student&quot;s success.<br/> 3. **Industry Relevance:** We
             maintain a close connection with industry trends, ensuring that our
-            programs are up-to-date and aligned with the needs of today's job
+            programs are up-to-date and aligned with the needs of today&quot;s job
             market.<br/> 4. **Community Engagement:** We actively engage with the
             community, contributing to its development and supporting local
             initiatives. <br/>5. **Personal Development:** Beyond academic
             achievements, we are committed to nurturing personal growth and
-            character development, preparing students for life's challenges.
+            character development, preparing students for life&quot;s challenges.
             </Typography>
             <Typography variant="h3" sx={{ lineHeight: 2 }}>Vision Statement:</Typography>
             <Typography variant="body1" sx={{ lineHeight: 2 }}>

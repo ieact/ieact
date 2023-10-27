@@ -6,6 +6,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import React from "react";
+import Image from 'next/image';
 
 function createData(name, details) {
   return { name, details };
@@ -51,7 +52,7 @@ const GeneralDuty = () => {
                   background: "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
                 }}
               >
-                <img
+                <Image 
                   src={"/courses/electri.svg"}
                   alt="Image"
                   style={{ width: "100%" }}
@@ -66,13 +67,13 @@ const GeneralDuty = () => {
                   </List>
                 </Typography>
                 <Typography variant="body1" lineHeight={2}>
-                  General Duty Assistant-Healthcare (GDA) are also known as "Nursing Care Assistant," "Nursing Assistant," "Nursing Aide," "Bedside Assistant" or "Orderly" when working in a hospital environment.
+                  General Duty Assistant-Healthcare (GDA) are also known as &apos;Nursing Care Assistant,&apos; &apos;Nursing Assistant,&apos; &apos;Nursing Aide,&apos; &apos;Bedside Assistant&apos; or &apos;Orderly&apos; when working in a hospital environment.
                 </Typography>
                 <Typography variant="h4" lineHeight={1.5}>
                   Brief Description
                 </Typography>
                 <Typography variant="body1" lineHeight={2}>
-                  Individual on the job provides patient care and helps maintain a suitable environment. Some of the key responsibilities of the General Duty Assistant are to provide the patient's daily care, patient's comfort, patient's safety, and patient's health needs.
+                  Individual on the job provides patient care and helps maintain a suitable environment. Some of the key responsibilities of the General Duty Assistant are to provide the patient&quot;s daily care, patient&quot;s comfort, patient&quot;s safety, and patient&quot;s health needs.
                 </Typography>
                 <Typography variant="h4" lineHeight={1.5}>
                   Personal Attributes:
