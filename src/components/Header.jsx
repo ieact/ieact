@@ -58,24 +58,36 @@ export default function Header() {
           boxShadow: "none",
         }}
       >
-        <Grid container justifyContent="space-between" alignItems="center">
-          <Grid item>
+        <Grid container spacing={4} justifyContent="space-between" alignItems="center">
+          <Grid item  lg={2} xl={2}>
+           
             <Link href="/" component="div">
-              <Image src="/logo.jpg" alt="My Image" width={160} height={160} />
+              <Image src="/logo.png" alt="IEACT logo" width={160} height={160} />
             </Link>
+           
           </Grid>
 
+          <Hidden smDown mdDown>
+            <Grid item   lg={2} xl={2} >
+             <Typography variant="h6">INDRA EDUCATIONAL AND CHARITABLE TRUST </Typography>
+             </Grid></Hidden>
+          {/* <Hidden mdUp>
           <Grid item>
+             <Typography variant="h3" sx={{p:1}}> </Typography>
+             </Grid>
+</Hidden> */}
+          <Grid item >
             <Toolbar>
               <Hidden mdUp>
                 {/* Show menu icon and open side menu on small screens */}
+                <Typography variant="h3" sx={{p:1}}> </Typography>
                 <IconButton
                   edge="start"
                   color="inherit"
                   aria-label="menu"
                   onClick={toggleMenu}
                 >
-                  <MenuIcon />
+             <MenuIcon />
                 </IconButton>
                 <Drawer anchor="left" open={menuOpen} onClose={toggleMenu}>
                   {/* Side menu items for small screens */}
@@ -96,27 +108,54 @@ export default function Header() {
                       <Link href="/">
                         <Button onClick={toggleMenu}>Home</Button>
                       </Link>
+                      <Divider/>
 
                       <Link href="/aboutus">
                         <Button onClick={toggleMenu}>About us</Button>
-                      </Link>
-                      <Button onClick={toggleSubMenu}>Courses</Button>
+                      </Link> <Divider/>
+                      <Button onClick={toggleSubMenu} sx={{justifyContent:'left'}}>Projects</Button>
                       {subMenuOpen && (
                         <div style={{ paddingLeft: '20px' }}>
-                          <Link href="/sub-menu-item-1">
-                            <Button onClick={handleSubMenuClose}>Sub Menu Item 1</Button>
+                          <Stack direction={"column"}>
+                          <Link href="/projects/nsdc/NSDC">
+                            <Button onClick={handleSubMenuClose}>NSDC</Button>
                           </Link>
-                          <Link href="/sub-menu-item-2">
-                            <Button onClick={handleSubMenuClose}>Sub Menu Item 2</Button>
+                          <Link href="/projects/tnsdc/TNSDC">
+                            <Button onClick={handleSubMenuClose}> TNSTC</Button>
                           </Link>
-                          {/* Add more sub-menu items as needed */}
-                        </div>)}
+                          <Link href="/projects/moma/MoMA">
+                            <Button onClick={handleSubMenuClose}>Day-NULM</Button>
+                          </Link>
+                          <Link href="/projects/ddugky/DDU">
+                            <Button onClick={handleSubMenuClose}> DDU-GKY</Button>
+                          </Link>  
+                          <Link href="/projects/moma/MoMA">
+                            <Button onClick={handleSubMenuClose}>MoMA</Button>
+                          </Link>  </Stack>              
+                        </div>)} <Divider/>
+                      <Button onClick={toggleSubMenu} sx={{justifyContent:'left'}}>Courses</Button>
+                      {subMenuOpen && (
+                        <div style={{ paddingLeft: '20px' }}>
+                          <Stack direction={"column"}>
+                          <Link href="/courses/ithelp/Ithelp">
+                            <Button onClick={handleSubMenuClose}>IT Help Assistant</Button>
+                          </Link>
+                          <Link href="/courses/assistantElect/Electrician">
+                            <Button onClick={handleSubMenuClose}>AssitantElectrician</Button>
+                          </Link>
+                          <Link href="/courses/generalDuty/Generalduty">
+                            <Button onClick={handleSubMenuClose}>Generalduty Assitant</Button>
+                          </Link>
+                          <Link href="/courses/handset/HandsetRepair">
+                            <Button onClick={handleSubMenuClose}>Handset Repair</Button>
+                          </Link>  </Stack>               
+                        </div>)} <Divider/>
                       <Link href="/aboutus">
                         <Button onClick={toggleMenu}>Affiliation-PIA</Button>{" "}
-                      </Link>
+                      </Link> <Divider/>
                       <Link href="/contactform/contact">
                         <Button onClick={toggleMenu}>Contact Us</Button>
-                      </Link>
+                      </Link> <Divider/>
                     </Stack>
                   </div>
                 </Drawer>

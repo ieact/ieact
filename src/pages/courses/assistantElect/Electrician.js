@@ -16,7 +16,8 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Image from "next/image";
 import React from "react";
-
+import styles from "@/styles/Home.module.css";
+import Link from "next/link";
 function createData(name, details) {
   return { name, details };
 }
@@ -34,23 +35,24 @@ const Electrician = () => {
   return (
     <>
       <Box>
-        <Grid item xs={12}>
-          <Box
-            width="100vw"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
+      <Grid item xs={12}>
+        <Box
+          sx={{
+            background: "linear-gradient(140deg, #f6d365 0%, #fda085 97%)",
+          }}
+          className={styles.headerbox}
+        >
+          <Typography
+            variant="h3"
             sx={{
-              paddingBottom: 3,
-              background: "linear-gradient(140deg, #f6d365 0%, #fda085 97%)",
-              height: { xs: 150, sm: 125, md: 180, lg: 100 },
+              textAlign: "center",
+              justifyContent: "center",
             }}
           >
-            <Typography variant="h3" color="secondary">
-              General Duty
-            </Typography>
-          </Box>
-        </Grid>
+            Electrician
+          </Typography>
+        </Box>
+      </Grid>
         <Box
           sx={{
             background: "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
@@ -65,11 +67,12 @@ const Electrician = () => {
                       "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
                   }}
                 >
-                  <Image 
-                  src={"/courses/electri.svg"}
-                  alt="Image"
-                  style={{ width: "100%" }}
-                />
+                  <Image
+                    src={"/courses/electri.svg"}
+                    alt="Image"
+                    width={"600"}
+                    height={"600"}
+                  />
                   <Typography variant="h6">
                     <List>
                       <ListItem>• Sector: Construction</ListItem>
@@ -98,8 +101,8 @@ const Electrician = () => {
                     electrical connections at construction sites and residential
                     and commercial buildings.
                     <br />
-                    Electrician&quot;s Assistant Level-4 Electrician or above for
-                    installation, repair, and maintenance of permanent
+                    Electrician&quot;s Assistant Level-4 Electrician or above
+                    for installation, repair, and maintenance of permanent
                     connections.
                     <br /> Individual LV is single Appropriate selection and use
                     of phase wiring and skillful use of hand and power tools
@@ -153,8 +156,9 @@ const Electrician = () => {
                           </TableRow>
                         ))}
                         <TableRow>
-                          <TableCell align="right" colSpan={2}>
-                            <Button>Apply now</Button>
+                          <TableCell align="center" colSpan={2}>
+                            <Link href={'/contactform/contact'}>
+                            <Button>Apply now</Button></Link>
                           </TableCell>
                         </TableRow>
                       </TableBody>

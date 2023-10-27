@@ -16,7 +16,7 @@ const theme = createTheme({
     },
     secondary: {
       // main: "#40330E",
-      main:"#0b3ed9",
+      main: "#0b3ed9",
       // main: "#f50057",
     },
     warning: {
@@ -42,62 +42,62 @@ const theme = createTheme({
     },
   },
 
-
-  typography : {
+  typography: {
     h2: {
-      fontFamily: 'Playpen Sans',
+      fontFamily: "Playpen Sans",
     },
-      h3: {
+    h3: {
+      fontSize: "2rem",
+      "@media (min-width:600px)": {
         fontSize: "2rem",
-        "@media (min-width:600px)": {
-          fontSize: "2rem",
-        },
-      
-       
-
       },
+    },
 
-      "@media (min-width:900px)": {
+    "@media (min-width:900px)": {
+      fontSize: "1.5rem",
+    },
+    h4: {
+      "@media (min-width:600px)": {
         fontSize: "1.5rem",
       },
-      // [theme.breakpoints.up("md")]: {
-      //   fontSize: "2rem",
-      // },
-    
-      // h2: {
-      //   [theme.breakpoints.down("xs")]: {
-      //     fontSize: "1.5rem", 
-      //   },
-      //   [theme.breakpoints.up("sm")]: {
-      //     fontSize: "2rem", 
-      //   },
-      //   lineHeight: 1.5,
-      // },
-    
-     
-     
-      // subtitle2: {
-      //   [theme.breakpoints.down("xs")]: {
-      //     fontSize: "1.25rem", 
-      //   },
-      //   [theme.breakpoints.up("sm")]: {
-      //     fontSize: "1.5rem",
-      //   },
-      //   lineHeight: 1.5,
-      // },
-      // subtitle3: {
-      //   [theme.breakpoints.down("xs")]: {
-      //     fontSize: "1.125rem", 
-      //   },
-      //   [theme.breakpoints.up("sm")]: {
-      //     fontSize: "1.25rem", // Adjust the size for sm (small) and larger screens
-      //   },
-      //   lineHeight: 1.5,
-      // },
-     
-     
+      "@media (min-width:900px)": {
+        fontSize: "1.25rem",
+      },
     },
 
+    // [theme.breakpoints.up("md")]: {
+    //   fontSize: "2rem",
+    // },
+
+    // h2: {
+    //   [theme.breakpoints.down("xs")]: {
+    //     fontSize: "1.5rem",
+    //   },
+    //   [theme.breakpoints.up("sm")]: {
+    //     fontSize: "2rem",
+    //   },
+    //   lineHeight: 1.5,
+    // },
+
+    // subtitle2: {
+    //   [theme.breakpoints.down("xs")]: {
+    //     fontSize: "1.25rem",
+    //   },
+    //   [theme.breakpoints.up("sm")]: {
+    //     fontSize: "1.5rem",
+    //   },
+    //   lineHeight: 1.5,
+    // },
+    // subtitle3: {
+    //   [theme.breakpoints.down("xs")]: {
+    //     fontSize: "1.125rem",
+    //   },
+    //   [theme.breakpoints.up("sm")]: {
+    //     fontSize: "1.25rem", // Adjust the size for sm (small) and larger screens
+    //   },
+    //   lineHeight: 1.5,
+    // },
+  },
 
   spacing: 16,
 
@@ -111,10 +111,6 @@ const theme = createTheme({
       },
     },
   },
-
- 
-
-  
 });
 
 export default theme;

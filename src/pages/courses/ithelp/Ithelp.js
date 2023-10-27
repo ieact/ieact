@@ -6,6 +6,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function createData(name, details) {
@@ -47,11 +48,12 @@ const Electrician = () => {
                   background: "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
                 }}
               >
-                 <Image 
-                  src={"/courses/electri.svg"}
-                  alt="Image"
-                  style={{ width: "100%" }}
-                />
+                  <Image
+                    src={"/courses/ithelp.svg"}
+                    alt="Image"
+                    width={"600"}
+                    height={"600"}
+                  />
                 <Typography variant="h6">
                   <List>
                     <ListItem>• Sector: Construction</ListItem>
@@ -111,8 +113,9 @@ const Electrician = () => {
                         </TableRow>
                       ))}
                       <TableRow>
-                        <TableCell align="right" colSpan={2}>
-                          <Button>Apply now</Button>
+                      <TableCell align="center" colSpan={2}>
+                        <Link href={'/contactform/contact'}>
+                            <Button>Apply now</Button></Link>
                         </TableCell>
                       </TableRow>
                     </TableBody>

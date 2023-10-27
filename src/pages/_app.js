@@ -10,6 +10,7 @@ import theme from '../config/theme';
 import createEmotionCache from '../config/createEmotionCache';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ContactButtons from './contactform/ContactFab';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -28,7 +29,7 @@ export default function MyApp(props) {
         <CssBaseline />
         <Header/>
         <Component {...pageProps} />
-        <Footer/>
+        <Footer/><ContactButtons/>
       </ThemeProvider>
     </CacheProvider>
   );

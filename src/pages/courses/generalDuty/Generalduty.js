@@ -7,6 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import React from "react";
 import Image from 'next/image';
+import Link from "next/link";
 
 function createData(name, details) {
   return { name, details };
@@ -19,6 +20,15 @@ const rows = [
   createData("NSQF Level", "4"),
   createData("Role Description", ""),
 ];
+const course = [
+  createData("Sector", "Healthcare"),
+  createData("Sub Sector", "General Duty Assistant",),
+  createData("Occupation", "Nursing Care Assistant",),
+  createData("Reference ID", "CON/Q0602"),
+  createData("Revised", "NCO-2004/7137.2"),
+ 
+];
+
 const GeneralDuty = () => {
   return (
     <>
@@ -52,19 +62,14 @@ const GeneralDuty = () => {
                   background: "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
                 }}
               >
-                <Image 
-                  src={"/courses/electri.svg"}
-                  alt="Image"
-                  style={{ width: "100%" }}
-                />
+                 <Image
+                    src={"/courses/general.svg"}
+                    alt="Image"
+                    width={"600"}
+                    height={"600"}
+                  />
                 <Typography variant="h6">
-                  <List>
-                    <ListItem>• Sector: Healthcare</ListItem>
-                    <ListItem>• Sub Sector: General Duty Assistant</ListItem>
-                    <ListItem>• Occupation: Nursing Care Assistant</ListItem>
-                    <ListItem>• Reference ID: CON/Q0602</ListItem>
-                    <ListItem>• Revised: NCO-2004/7137.2</ListItem>
-                  </List>
+               
                 </Typography>
                 <Typography variant="body1" lineHeight={2}>
                   General Duty Assistant-Healthcare (GDA) are also known as &apos;Nursing Care Assistant,&apos; &apos;Nursing Assistant,&apos; &apos;Nursing Aide,&apos; &apos;Bedside Assistant&apos; or &apos;Orderly&apos; when working in a hospital environment.
@@ -114,9 +119,41 @@ const GeneralDuty = () => {
                         </TableRow>
                       ))}
                       <TableRow>
-                        <TableCell align="right" colSpan={2}>
-                          <Button>Apply now</Button>
+                        <TableCell>
+                      <Link href={'/contactform/contact'}>
+                            <Button>Apply now</Button></Link>
+                          </TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+                <TableContainer>
+                  <Table
+                    sx={{
+                      minWidth: 250,
+                      background: "linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)",
+                    }}
+                    aria-label="caption table"
+                  >
+                    <TableHead>
+                      <TableRow>
+                        <TableCell align="center" colSpan={2}>
+                          General Duty Assistant
                         </TableCell>
+                      </TableRow>
+                     
+                    </TableHead>
+                    <TableBody>
+                      {course.map((row) => (
+                        <TableRow key={row.name}>
+                          <TableCell component="th" scope="row">
+                            {row.name}
+                          </TableCell>
+                          <TableCell align="right">{row.details}</TableCell>
+                        </TableRow>
+                      ))}
+                      <TableRow>
+                       
                       </TableRow>
                     </TableBody>
                   </Table>

@@ -87,47 +87,9 @@ const NSDC = () => {
           </Grid>
 
           <Grid container>
-            <Grid item xs={12}>
-              <Typography variant="h4" sx={{ lineHeight: 2 }}>
-                Our training centers envisage to:
-              </Typography>
-              <Typography variant="body1" sx={{ lineHeight: 2 }}>
-                ⚫ Create benchmark that demonstrate aspirational value for
-                competency-based skill development training.
-                <br />
-                ⚫ Focus on elements of quality, sustainability and Connection
-                with stakeholders in skills delivery process.
-                <br />⚫ Transform from a Mandate-driven footloose model to a
-                sustainable institutional model.
-              </Typography>
-              <Typography variant="h3" sx={{ lineHeight: 2 }}>
-                Vision Statement:
-              </Typography>
-              <Typography variant="body1" sx={{ lineHeight: 2 }}>
-                Our vision is to be recognized as a premier training institute
-                known for its commitment to excellence, innovation, and holistic
-                development.
-                <br /> We aspire to:
-                <br /> 1. **Leadership in Education:** Be a leader in the field
-                of education and skill development, setting the standard for
-                quality and innovation.
-                <br /> 2. **Global Impact:** Extend our reach internationally,
-                fostering partnerships and collaborations that benefit students
-                on a global scale. <br />
-                3. **Diversity and Inclusivity:** Create a diverse and inclusive
-                community that celebrates differences and promotes a culture of
-                respect and understanding.
-                <br /> 4. **Lifelong Learning:** Encourage a culture of lifelong
-                learning, inspiring students to continually pursue knowledge and
-                growth.
-                <br /> 5. **Alumni Success:** Measure our success by the
-                accomplishments of our alumni, who make a positive impact on
-                society and their chosen fields.
-                <br /> 6. **Continuous Improvement:** Embrace a commitment to
-                continuous improvement, constantly evolving to meet the changing
-                needs of our students and the world.
-              </Typography>
-            </Grid>
+            
+             
+           
           </Grid>
         </Grid>
       </Container>

@@ -7,6 +7,9 @@ import styles from "@/styles/Home.module.css";
 import {
   Button,
   Card,
+  CardActions,
+  CardContent,
+  CardMedia,
   Container,
   Grid,
   Hidden,
@@ -15,8 +18,7 @@ import {
 } from "@mui/material";
 import { Box, Stack } from "@mui/system";
 import ContactForm from "./contactform/contact";
-
-
+import Link from "next/link";
 
 export default function Home() {
   const choose = [
@@ -138,7 +140,7 @@ export default function Home() {
     },
     {
       id: 4,
-      imageUrl: "ssc\essci1.png",
+      imageUrl: "sscessci1.png",
       description: " Electronics Sector Skills Council of India",
       alt: "Image 1",
       link: "https://www.essc-india.org/",
@@ -175,19 +177,18 @@ export default function Home() {
 
   return (
     <>
-      {/* <ThemeProvider theme={theme}> */}
+      <Box
+        // minHeight={789}
+        width="100vw"
+        display="flex"
+        justifyContent="flex-end"
+        sx={{
+          // background: "linear-gradient(140deg, #f6d365 0%, #fda085 97%)",
+          background: `url("/bg/herocover.png") center / cover`,
+          minHeight: { xs: 1000, sm: 1000, md: 800, lg: 789 }, // Responsive height
+        }}
+      >
         <Box
-          // minHeight={789}
-          width="100vw"
-          display="flex"
-          justifyContent="flex-end"
-          sx={{
-            // background: "linear-gradient(140deg, #f6d365 0%, #fda085 97%)",
-            background: `url("/bg/herocover.png") center / cover`,
-            minHeight: { xs: 1000, sm: 1000, md: 800, lg: 789 }, // Responsive height
-          }}
-        >
-          <Box
           position="absolute"
           left="0"
           width="100vw"
@@ -195,7 +196,7 @@ export default function Home() {
           backgroundColor="rgba(0, 0, 0, 0.7)"
         >
           <Grid container>
-          {/* <Hidden smDown >
+            {/* <Hidden smDown >
             <Grid item xs={12} sm={12} md={6} lg={6}>
               <Box
                 sx={{
@@ -216,7 +217,8 @@ export default function Home() {
                 textAlign={{ xs: "left", md: "left" }}
                 sx={{
                   justifyContent: "center",
-                  alignItems: "center", // Center the text vertically
+                  alignItems: "center",
+                  textAlign: "center",
                   p: 3,
                 }}
               >
@@ -231,201 +233,241 @@ export default function Home() {
                   tempor invidunt ut labore et dolore magna aliquyam diam
                   voluptua.
                 </Typography>
-                <Button
-                  variant="contained"
-                  sx={{
-                    background: "#f50057",
-                    color: "warm.main",
-                    lineHeight: 2,
-                    width: "30", // Button width on all screen sizes
-                    ":hover": {
-                      background: "primary.main",
+                <Link href={"/contactform/contact"}>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      background: "#f50057",
                       color: "warm.main",
-                    },
-                  }}
-                >
-                  Join Course
-                </Button>
+                      lineHeight: 2,
+                      width: "30", // Button width on all screen sizes
+                      ":hover": {
+                        background: "primary.main",
+                        color: "warm.main",
+                      },
+                    }}
+                  >
+                    Join Course
+                  </Button>
+                </Link>
               </Box>
             </Grid>
           </Grid>{" "}
         </Box>
-        </Box>
-        
+      </Box>
 
-        <Box
-          width="100vw"
-          display="flex"
-          justifyContent="center"
-          alignItems={"center"}
-          sx={{
-            background: " linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
-            height: { xs: 1500, sm: 1200, md: 800, lg: 789 },
-          }}
-        >
-          <Container>
-            <Grid
-              container
-              spacing={3}
-              // sx={{
-              //   justifyContent: "center",
-              //   alignItems: "center",
-              //   display: "column",
-              // }}
-            >
-              <Grid item xs={12}>
-                <Typography variant="h3" sx={{ textAlign: "center" }}>
-                  Why Should Choose IEACT
-                </Typography>
-              </Grid>
-              {jobs.map((item) => (
-                <Grid
-                  item
-                  key={item.id}
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  lg={4}
-                  sx={{ p: 2 }}
-                >
-                  <Box
-                    sx={{
-                      height: "300",
-                      textAlign: "center",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      display: "column",
-                    }}
-                  >
-                    <img
-                      src={item.imageUrl}
-                      alt={`Image ${item.description}`}
-                      style={{ height: 120 }}
-                    />
-                    <Typography variant="h5" sx={{ lineHeight: 2 }}>
-                      {item.title}
-                    </Typography>
-                    <Typography variant="body1" sx={{ lineHeight: 2 }}>
-                      {item.description}
-                    </Typography>
-                  </Box>
-                </Grid>
-              ))}
+      <Box
+        width="100vw"
+        display="flex"
+        justifyContent="center"
+        alignItems={"center"}
+        sx={{
+          background: " linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
+          height: { xs: 1500, sm: 1200, md: 800, lg: 789 },
+        }}
+      >
+        <Container>
+          <Grid
+            container
+            spacing={3}
+            // sx={{
+            //   justifyContent: "center",
+            //   alignItems: "center",
+            //   display: "column",
+            // }}
+          >
+            <Grid item xs={12}>
+              <Typography variant="h3" sx={{ textAlign: "center" }}>
+                We Offers
+              </Typography>
             </Grid>
-          </Container>
-        </Box>
-
-        <Box
-          width="100vw"
-          display="flex"
-          justifyContent="center"
-          alignItems={"center"}
-          sx={{
-            background: "linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)",
-            height: { xs: 1800, sm: 1200, md: 800, lg: 789 },
-          }}
-        >
-          <Container>
-            <Grid container spacing={3}>
-              <Grid item xs={12}>
-                <Typography
-                  variant="h3"
-                  sx={{ color: "primary.main", textAlign: "center" }}
-                >
-                  Why Choose Us?
-                </Typography>
-              </Grid>
-              {choose.map((item) => (
-                <Grid item key={item.id} xs={12} sm={6} md={4} lg={4}>
-                  <Box
-                    className={styles.choose}
-                    sx={{
-                      p: 3,
-                      textAlign: "center",
-                      minHeight: 200,
-                      justifyContent: "center",
-                    }}
-                  >
-                    <Typography variant="h5" sx={{ lineHeight: 1.2 }}>
-                      {item.title}
-                    </Typography>
-                    <Typography variant="body2" sx={{ lineHeight: 2 }}>
-                      {item.description}
-                    </Typography>
-                  </Box>
-                </Grid>
-              ))}
-            </Grid>
-          </Container>
-        </Box>
-
-        <Box
-          width="100vw"
-          display="flex"
-          justifyContent="center"
-          alignItems={"center"}
-          sx={{
-            // background: " linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
-            height: { xs: 2500, sm: 1500, md: 1100, lg: 1000 },
-          }}
-        >
-          <Container>
-            <Grid container>
-              <Grid item xs={12}>
-                <Typography
-                  variant="h3"
+            {jobs.map((item) => (
+              <Grid
+                item
+                key={item.id}
+                xs={12}
+                sm={6}
+                md={4}
+                lg={4}
+                sx={{ p: 2 }}
+              >
+                <Box
                   sx={{
-                    color: "primary.main",
+                    height: "300",
                     textAlign: "center",
-                    transition: "color 0.3s",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    display: "column",
                   }}
                 >
-                  Sector Skill Council (SSC)
-                </Typography>
+                  <img
+                    src={item.imageUrl}
+                    alt={`Image ${item.description}`}
+                    style={{ height: 120 }}
+                  />
+                  <Typography variant="h5" sx={{ lineHeight: 2 }}>
+                    {item.title}
+                  </Typography>
+                  <Typography variant="body1" sx={{ lineHeight: 2 }}>
+                    {item.description}
+                  </Typography>
+                </Box>
               </Grid>
-              {sscImg.map((item) => (
-                <Grid item key={item.id} xs={12} sm={6} md={4} lg={3}>
-                  <Box
-                    className={styles.box}
-                    sx={{
-                      p: 3,
-                      textAlign: "center",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      display: "column",
-                      height: { xs: 300, sm: 300, md: 300, lg: 370 },
-                    }}
-                  >
-                    <Box sx={{height:70}}>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+
+      <Box
+        width="100vw"
+        display="flex"
+        justifyContent="center"
+        alignItems={"center"}
+        sx={{
+          background: "linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)",
+          height: { xs: 1800, sm: 1200, md: 800, lg: 789 },
+        }}
+      >
+        <Container>
+          <Grid container spacing={3}>
+            <Grid item xs={12}>
+              <Typography
+                variant="h3"
+                sx={{ color: "primary.main", textAlign: "center" }}
+              >
+                Why Choose Us?
+              </Typography>
+            </Grid>
+            {choose.map((item) => (
+              <Grid item key={item.id} xs={12} sm={6} md={4} lg={4}>
+                <Box
+                  className={styles.choose}
+                  sx={{
+                    p: 3,
+                    textAlign: "center",
+                    minHeight: 200,
+                    justifyContent: "center",
+                  }}
+                >
+                  <Typography variant="h5" sx={{ lineHeight: 1.2 }}>
+                    {item.title}
+                  </Typography>
+                  <Typography variant="body2" sx={{ lineHeight: 2 }}>
+                    {item.description}
+                  </Typography>
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+
+      <Box
+        width="100vw"
+        display="flex"
+        justifyContent="center"
+        alignItems={"center"}
+        sx={{
+          // background: " linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
+          height: { xs: 2800, sm: 1500, md: 1100, lg: 1000 },
+        }}
+      >
+        <Container>
+          <Grid container>
+            <Grid item xs={12}>
+              <Typography
+                variant="h3"
+                sx={{
+                  color: "primary.main",
+                  textAlign: "center",
+                  transition: "color 0.3s",
+                }}
+              >
+                Sector Skill Council (SSC)
+              </Typography>
+            </Grid>
+            {sscImg.map((item) => (
+              <Grid item key={item.id} xs={12} sm={6} md={4} lg={3}>
+                <Box
+                  className={styles.box}
+                  sx={{
+                    m: 1,
+                    textAlign: "center",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    display: "column",
+                    height: { xs: 300, sm: 300, md: 300, lg: 370 },
+                  }}
+                >
+                  <Box sx={{ height: 90 }}>
                     <img
                       src={item.imageUrl}
                       alt={`Image ${item.alt}`}
                       style={{ height: 70 }}
                     />
-                    </Box>
-                    <Box sx={{height:180}}>
-                    <Typography variant="h6">{item.description}</Typography>
-                    </Box>
-                    <a href={item.link}>
-                      <Button variant="contained" sx={{alignContent:'end'}}>View</Button>
-                    </a>
                   </Box>
-                </Grid>
-              ))}
-            </Grid>
-          </Container>
-        </Box>
-
-        <Box
-          width="100vw"
-          display="flex"
-          justifyContent="center"
-          alignItems={"center"}
+                  <Box sx={{ height: 150 }}>
+                    <Typography variant="h6">{item.description}</Typography>
+                  </Box>
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                    <Button variant="contained" sx={{ alignContent: "end" }}>
+                      View
+                    </Button>
+                  </a>
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+          {/* <Grid container>
+      <Grid item xs={12}>
+        <Typography
+          variant="h3"
           sx={{
-            background: " linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)",
-            height: { xs: 1700, sm: 1200, md: 1000, lg: 789 },
+            color: "primary.main",
+            textAlign: "center",
+            transition: "color 0.3s",
           }}
         >
+          Sector Skill Council (SSC)
+        </Typography>
+      </Grid>
+      {sscImg.map((item) => (
+        <Grid item key={item.id} xs={12} sm={6} md={4} lg={3}>
+          <Card sx={{ m: 1, display: "flex", flexDirection: "column", height: { xs: 350, sm: 370, md: 370, lg: 450 } }}>
+            <CardMedia
+              component="img"
+              alt={`Image ${item.alt}`}
+              height="50"
+              image={item.imageUrl}
+            />
+            <CardContent sx={{ flex: "1 0 auto" }}>
+              <Typography variant="h6">{item.description}</Typography>
+            </CardContent>
+            <CardActions>
+              <a href={item.link}>
+                <Button variant="contained" sx={{ ml: "auto" }}>
+                  View
+                </Button>
+              </a>
+            </CardActions>
+          </Card>
+        </Grid>
+      ))}
+    </Grid> */}
+        </Container>
+      </Box>
+
+      <Box
+        width="100vw"
+        display="flex"
+        justifyContent="center"
+        alignItems={"center"}
+        sx={{
+          background: " linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)",
+          height: { xs: 1700, sm: 1200, md: 1000, lg: 789 },
+        }}
+      >
+        <section id="sectioncourse">
           <Container>
             <Grid
               container
@@ -436,7 +478,7 @@ export default function Home() {
                 display: "flex",
               }}
             >
-              <Grid item xs={12} >
+              <Grid item xs={12}>
                 <Typography
                   variant="h3"
                   sx={{
@@ -490,9 +532,10 @@ export default function Home() {
               ))}
             </Grid>
           </Container>
-        </Box>
+        </section>
+      </Box>
 
-        {/* <Box
+      {/* <Box
           width="100vw"
           display="flex"
           justifyContent="center"

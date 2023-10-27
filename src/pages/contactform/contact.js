@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Button, Container, Grid, TextField, Typography } from '@mui/material';
 import { useInView } from 'react-intersection-observer';
 import { Box } from '@mui/system';
+import styles from "@/styles/Home.module.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -44,18 +45,33 @@ const ContactForm = () => {
   return (
     <>
     <Box
-          width="100vw"
-          display="flex"
-          justifyContent="center"
-          alignItems={"center"}
+          // width="100vw"
+          // display="flex"
+          // justifyContent="center"
+          // alignItems={"center"}
+          // sx={{
+          //   background: "linear-gradient(140deg, #f6d365 0%, #fda085 97%)",
+          //   height: { xs: 100, sm: 100, md: 100, lg: 100 },
+          // }}
+        >
+         <Grid item xs={12}>
+        <Box
           sx={{
             background: "linear-gradient(140deg, #f6d365 0%, #fda085 97%)",
-            height: { xs: 100, sm: 100, md: 100, lg: 100 },
           }}
+          className={styles.headerbox}
         >
-          <Typography variant='h2'>
-            Contact
+          <Typography
+            variant="h3"
+            sx={{
+              textAlign: "center",
+              justifyContent: "center",
+            }}
+          >
+            Contact-Us
           </Typography>
+        </Box>
+      </Grid>
         </Box>
         <Container>
         <Grid container spacing={2}>
@@ -84,6 +100,7 @@ const ContactForm = () => {
            }}>
 
       <form onSubmit={handleSubmit}>
+        <br/> <br/>
         <TextField
           label="Name"
           variant="outlined"

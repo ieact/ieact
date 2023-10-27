@@ -34,3 +34,21 @@
   transition: box-shadow 0.3s;
 }
 
+.headerbox{
+  background: "linear-gradient(140deg, #f6d365 0%, #fda085 97%)";
+  width:"100vw";
+  justify-content: center;
+  align-items: center;
+  display: column;
+}
+/* <Box
+width="100vw"
+display="flex"
+justifyContent="center"
+alignItems={"center"}
+sx={{
+  background: "linear-gradient(140deg, #f6d365 0%, #fda085 97%)",
+  height: { xs: 100, sm: 100, md: 100, lg: 100 },
+}} */
+
+

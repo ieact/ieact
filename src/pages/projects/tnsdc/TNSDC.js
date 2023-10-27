@@ -53,7 +53,7 @@ const TNSDC = () => {
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={12}>
             <Box>
-              <Typography variant="h4" sx={{ lineHeight: 2 }}>
+              <Typography variant="h4" sx={{ lineHeight: 1.5 }}>
                 Short Term Training
               </Typography>
 
@@ -68,10 +68,8 @@ const TNSDC = () => {
                 placement assistance by training providers.
               </Typography>
             </Box>
-          </Grid>
-
-          <Grid container>
-            <Grid item xs={12}>
+        
+         
               <Typography variant="body1" sx={{ lineHeight: 2 }}>
                 The Short-Term Training (STT) shall be implemented under both
                 Central and State component of the scheme. STT shall have
@@ -90,7 +88,7 @@ const TNSDC = () => {
                 potential for international employment of the Indian youth.
               </Typography>
             </Grid>
-          </Grid>
+          
         </Grid>
       </Container>
     </Box>

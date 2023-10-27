@@ -37,9 +37,9 @@ const Footer = () => {
               <Typography variant="h5" sx={{marginBottom:2}}>Quik Links</Typography>
               <Stack direction={"column"} sx={{ lineHeight: 2 }}>
                 <Link href={"/"}>Home </Link>
-                <Link href={"/"}>Courses </Link>
-                <Link href={"/"}>Ours </Link>
-                <Link href={"/"}>Home </Link>
+                <Link href={"/aboutus"}>About-Us </Link>
+                <Link href={"/contactform/contact"}>Contact-Us </Link>
+                <Link href={"/courses/assitantElect/Electrician"}>Courses </Link>
               </Stack>
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={5}>
@@ -70,7 +70,7 @@ const Footer = () => {
               </Stack>
             </Grid>
             {/* <Grid item xs={12} sm={6} md={4} lg={2}></Grid> */}
-            <Grid item xs={12} sm={6} md={4} lg={12}>
+            <Grid item xs={12} sm={12} md={12} lg={12} justifyContent={"center"}>
               <Typography variant="h5" sx={{marginBottom:2}}>Follow Us</Typography>
               <Stack direction="row" spacing={2} sx={{ lineHeight: 2 }}>
                 <TwitterIcon sx={{ borderRadius: "50%" }}></TwitterIcon>
