@@ -21,21 +21,31 @@ import CoursesHover from "@/pages/courses/CoursesHover";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [subMenuOpen, setSubMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-  const DrawerHeader = styled("div")(({ theme }) => ({
-    display: "flex",
-    alignItems: "center",
+
+  const toggleSubMenu = () => {
+    setSubMenuOpen(!subMenuOpen);
+  };
+
+  const DrawerHeader = styled('div')(({ theme }) => ({
+    display: 'flex',
+    alignItems: 'center',
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
-    justifyContent: "flex-end",
+    justifyContent: 'flex-end',
   }));
 
   const handleDrawerClose = () => {
     setMenuOpen(false);
+  };
+
+  const handleSubMenuClose = () => {
+    setSubMenuOpen(false);
   };
 
   return (
@@ -90,9 +100,17 @@ export default function Header() {
                       <Link href="/aboutus">
                         <Button onClick={toggleMenu}>About us</Button>
                       </Link>
-                      <Link href="/aboutus">
-                        <Button onClick={toggleMenu}>Courses</Button>{" "}
-                      </Link>
+                      <Button onClick={toggleSubMenu}>Courses</Button>
+                      {subMenuOpen && (
+                        <div style={{ paddingLeft: '20px' }}>
+                          <Link href="/sub-menu-item-1">
+                            <Button onClick={handleSubMenuClose}>Sub Menu Item 1</Button>
+                          </Link>
+                          <Link href="/sub-menu-item-2">
+                            <Button onClick={handleSubMenuClose}>Sub Menu Item 2</Button>
+                          </Link>
+                          {/* Add more sub-menu items as needed */}
+                        </div>)}
                       <Link href="/aboutus">
                         <Button onClick={toggleMenu}>Affiliation-PIA</Button>{" "}
                       </Link>
